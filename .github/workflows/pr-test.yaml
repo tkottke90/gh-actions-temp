@@ -4,8 +4,9 @@ on:
   pull_request:
     types:
       - ready_for_review
-    branches:
-      - "!main"
+    branches-ignore:
+      - "release/*"
+      - "main"
 
 jobs:
   my-first-job:
