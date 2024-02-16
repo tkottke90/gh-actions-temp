@@ -1,0 +1,17 @@
+name: 'PR Test'
+
+on:
+  pull_request:
+    types:
+      - ready_for_review
+
+jobs:
+  my-first-job:
+    name: "First Job"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Hello World
+        run: echo "Hello World"
